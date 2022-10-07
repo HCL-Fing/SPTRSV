@@ -49,17 +49,12 @@
 #define ROWS_PER_THREAD   1
 #endif
 
-
-// #ifndef GPU_BLK
-// #define GPU_BLK   512
-// #endif
-
 #define PRINT_TIME_ANALYSIS 1 
 
 #define CUDA_EVTS 1
 #define POSIX 2
 
-// #define CLK POSIX
+
 #define CLK CUDA_EVTS
 
 float clockElapsed(cudaEvent_t evt_start, cudaEvent_t evt_stop);
@@ -99,24 +94,7 @@ float clockElapsed(cudaEvent_t evt_start, cudaEvent_t evt_stop);
 #endif
 
 
-// #define BENCH_RUN_SOLVE(f,t,pow,s)                                             		 \
-// 	float t;                                                                    	 \
-// 	float pow;                                                                       \
-// 	nvmlAPIRun(s);	                                                                 \
-// 	CLK_START;			                                                             \
-// 	for (int i = 0; i < BENCH_REPEAT; ++i)                                           \
-// 	{	                                                                     	     \
-// 		cudaMemset(d_x, 0, n * sizeof(VALUE_TYPE));                                  \
-// 		f;                                                                           \
-// 	}	                                                                             \
-// 	cudaDeviceSynchronize();                                                         \
-// 	CLK_STOP;       		                                                         \
-// 	pow = nvmlAPIEnd();                                                              \
-// 	t = CLK_ELAPSED/(double)BENCH_REPEAT;                                 			 \
-// 	printf("%20.20s ----- %f ms ----- %f mW", s, t, pow/1000.0 );                    \
-// 	memset(x, 0, n * sizeof(VALUE_TYPE));      	                                 	 \
-// 	cudaMemcpy(x, d_x, n * sizeof(VALUE_TYPE), cudaMemcpyDeviceToHost);              \
-// 	if (validate_x(x, n, s)) { t = -1; }
+
 
 #define FULL_MASK 0xffffffff
 #define IT_HASH 200
@@ -144,7 +122,7 @@ float clockElapsed(cudaEvent_t evt_start, cudaEvent_t evt_stop);
 	cudaMemcpy(x, d_x, n * sizeof(VALUE_TYPE), cudaMemcpyDeviceToHost);              \
 	if (validate_x(x, n, s)) { all_passed=0; }
 
-	// t /= (double)BENCH_REPEAT;	                                         			 \
+	
 
 #define BENCH_RUN_SOLVE_MKL(f,t,s)                                            		 \
 	float t;                                                                     	 \
@@ -172,7 +150,7 @@ float clockElapsed(cudaEvent_t evt_start, cudaEvent_t evt_stop);
 	t = CLK_ELAPSED/(double)BENCH_REPEAT;                                 			 \
 	printf("%s ------------ %f ms\n", s, t );                                             
 
-// #define CUBL_CHK(call) print_cublas_state(call); 
+
 #define CUSP_CHK(call) print_cusparse_state(call);
 #define CUDA_CHK(call) print_cuda_state(call);
 
@@ -207,25 +185,6 @@ static inline void print_cusparse_state(cusparseStatus_t stat){
 		printf("\n");
 	}
 }
-
-// static inline void print_cublas_state(cublasStatus_t stat){
-
-// 	if(stat){
-// 		printf("\n");
-// 		switch (stat) {
-// 			case CUBLAS_STATUS_ALLOC_FAILED: printf("CUBLAS_STATUS_ALLOC_FAILED\n"); break;
-// 			case CUBLAS_STATUS_NOT_INITIALIZED: printf("CUBLAS_STATUS_NOT_INITIALIZED\n"); break;
-// 			case CUBLAS_STATUS_INVALID_VALUE: printf("CUBLAS_STATUS_INVALID_VALUE\n"); break;
-// 			case CUBLAS_STATUS_MAPPING_ERROR: printf("CUBLAS_STATUS_MAPPING_ERROR\n"); break;
-// 			case CUBLAS_STATUS_SUCCESS: printf("CUBLAS_STATUS_SUCCESS\n"); break;
-// 			case CUBLAS_STATUS_ARCH_MISMATCH:printf("CUBLAS_STATUS_ARCH_MISMATCH\n"); break;
-// 			case CUBLAS_STATUS_EXECUTION_FAILED:printf("CUBLAS_STATUS_EXECUTION_FAILED\n"); break;
-// 			case CUBLAS_STATUS_INTERNAL_ERROR:printf("CUBLAS_STATUS_INTERNAL_ERROR\n"); break;
-// 		}
-// 		printf("\n");
-// 	}
-
-// }
 
 
 double eval_time();

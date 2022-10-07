@@ -128,10 +128,6 @@ int main(int argc, char** argv) {
     int* csrColIdxA_tmp = (int*)malloc(nnzA_mtx_report * sizeof(int));
     VALUE_TYPE* csrValA_tmp = (VALUE_TYPE*)malloc(nnzA_mtx_report * sizeof(VALUE_TYPE));
 
-    /* NOTE: when reading in doubles, ANSI C requires the use of the "l"  */
-    /*   specifier as in "%lg", "%lf", "%le", otherwise errors will occur */
-    /*  (ANSI C X3.159-1989, Sec. 4.9.6.2, p. 136 lines 13-15)            */
-
     for (int i = 0; i < nnzA_mtx_report; i++) {
         int idxi, idxj;
         double fval;

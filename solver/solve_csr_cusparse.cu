@@ -5,11 +5,9 @@ void csr_L_solve_cusparse_v2(sp_mat_t* mat, const VALUE_TYPE* d_b, VALUE_TYPE* d
     cusparseHandle_t cusp_handle, cusparseMatDescr_t desc_L, csrsv2Info_t info_L,
     cusparseSolvePolicy_t    policy, void* pBuffer) {
 
-
     CLK_INIT
     VALUE_TYPE alpha = 1.0;
     CLK_START
-    // cudaMemset(d_x, 0, n * sizeof(VALUE_TYPE));
    
 #ifdef __float__
     CUSP_CHK(cusparseScsrsv2_solve(cusp_handle, CUSPARSE_OPERATION_NON_TRANSPOSE, n, nnz,
