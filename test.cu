@@ -32,7 +32,7 @@ void test_solve_L_analysis_multirow(const char* filename, int* csrRowPtrL, int* 
     int cusparse_levs;
     int *levelPtr, *levelInd;
 
-    multirow_analysis_base_GPU(&info, gpu_L);
+    multirow_analysis_base_GPU(&info, gpu_L, 0);
 
 
     VALUE_TYPE* b = (VALUE_TYPE*)malloc(sizeof(VALUE_TYPE) * n);
