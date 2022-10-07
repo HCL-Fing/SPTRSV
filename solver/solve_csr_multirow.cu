@@ -14,7 +14,6 @@ __device__ double atomicAdd(double* address, double val) {
     do {
         assumed = old;
         old = atomicCAS(address_as_ull, assumed, __double_as_longlong(val + __longlong_as_double(assumed)));
-        // Note: uses integer comparison to avoid hang in case of NaN (since NaN != NaN)
     } while (assumed != old);
 }
 #endif
@@ -28,7 +27,7 @@ __global__ void csr_L_solve_kernel_multirow(const int* __restrict__ row_ptr,
                                             int* row_ctr, int n, int n_warps) {
     thread_block_tile<32> tile32 = tiled_partition<32>(this_thread_block());
 
-    int wrp;  // identifica numero del warp
+    int wrp;  // warp identifier
 
     int lne0 = tile32.thread_rank();
 
@@ -37,26 +36,22 @@ __global__ void csr_L_solve_kernel_multirow(const int* __restrict__ row_ptr,
 
     if (wrp >= n_warps) return;
 
-    int vect_size = warp_vect_size[wrp];  // Cantidad de columnas que procesa el warp
+    int vect_size = warp_vect_size[wrp];  // Number of column the warp needs to process
 
-    int base_idx = warp_base_idx[wrp];  // En que columna empieza
+    int base_idx = warp_base_idx[wrp];  // Starting column
 
-    int n_vects = warp_base_idx[wrp + 1] - base_idx;  // Cantidad de elementos que tiene que procesar
+    int n_vects = warp_base_idx[wrp + 1] - base_idx;  // Number of elements to process
 
-    int vect_idx = (vect_size == 0) ? lne0 : lne0 / vect_size;  // En cual arranca cada thread
+    int vect_idx = (vect_size == 0) ? lne0 : lne0 / vect_size;  // Thread starting value
 
-    int row_idx = iorder[base_idx + vect_idx];  // Es la fila que esta en la primera posicion para este thread
+    int row_idx = iorder[base_idx + vect_idx];  // This is the value for the first row corresponeding to the thread
 
-    // return;
-    //  when executed in loop with few blocks to minimize occupancy and enable
-    //  concurrent execution with streams, the return statement would cause a
-    //  deadlock because some threads of the warp terminate the execution and
-    //  are not available in the next iteration. So we replace it with a continue statement.
+    
     if ((row_idx >= n) || (vect_idx >= n_vects)) return;
 
-    int nxt_row = row_ptr[row_idx + 1];  // Hasta que posicion va la fila
+    int nxt_row = row_ptr[row_idx + 1];  // Next row starting position
 
-    // El warp que tenga vect_size = 0 setea x y muere (el warp completo)
+    //The warp that has vect_size = 0 sets x and dies (the whole warp)
 
     if (vect_size == 0) {
         x[row_idx] = b[row_idx] / val[nxt_row - 1];
@@ -65,10 +60,9 @@ __global__ void csr_L_solve_kernel_multirow(const int* __restrict__ row_ptr,
 
     tile32.sync();
 
-    int vect_off = lne0 % vect_size;  // Cual le toca a cada thread (por si el warp es mas grande que la cantidad a procesar)
+    int vect_off = lne0 % vect_size;  
 
-    int row = row_ptr[row_idx];  // El valor de la fila
-
+    int row = row_ptr[row_idx];  // Row value
     VALUE_TYPE left_sum = 0;
     VALUE_TYPE piv;
 
@@ -79,7 +73,7 @@ __global__ void csr_L_solve_kernel_multirow(const int* __restrict__ row_ptr,
 
     int off = row + vect_off;
 
-    VALUE_TYPE my_val;  // El elemento de la fila que trabaja el thread
+    VALUE_TYPE my_val;  // Element corresponding to the thread
     VALUE_TYPE xx;
     int ready = 0;
 
@@ -87,8 +81,6 @@ __global__ void csr_L_solve_kernel_multirow(const int* __restrict__ row_ptr,
 
     int colidx;
 
-    // El problema esta en que en determinado momento deja de entrar en el segundo if, entonces deja de avanzar
-    // en la fila, sin haber llegado al final de esta
     while (off < nxt_row - 1) {
         colidx = col_idx[off];
         my_val = val[off];
@@ -98,8 +90,8 @@ __global__ void csr_L_solve_kernel_multirow(const int* __restrict__ row_ptr,
             ready = __double2hiint(xx) != (int)0xFFFFFFFF;
         }
 
-        if (ready) {                  // __all es usada para que todos los threads de un warp tomen la misma decision, si hay alguno que no lo cumple, no lo cumple ninguno
-            left_sum -= my_val * xx;  // left_sum es la suma parcial del valor del vector b de esa fila
+        if (ready) {                  
+            left_sum -= my_val * xx;  // left_sum is the partial sum of the values correpsing to the row
             off += vect_size;
 
             if (off < nxt_row) {
@@ -110,13 +102,13 @@ __global__ void csr_L_solve_kernel_multirow(const int* __restrict__ row_ptr,
 
     tile32.sync();
 
-    // Reduccion
+    // Reduction
     for (int i = vect_size / 2; i >= 1; i /= 2) {
         left_sum += __shfl_down_sync(__activemask(), left_sum, i, vect_size);
     }
 
     if (vect_off == 0) {
-        // escribo en el resultado
+        // Write result
         x[row_idx] = left_sum * piv;
     }
 }
