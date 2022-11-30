@@ -57,6 +57,7 @@
 
 #define CLK CUDA_EVTS
 
+
 float clockElapsed(cudaEvent_t evt_start, cudaEvent_t evt_stop);
 
 #if CLK == CUDA_EVTS

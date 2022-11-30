@@ -1,5 +1,15 @@
+#ifndef __DFR_SYNCFREE__
+#define __DFR_SYNCFREE__
+
 #define WARP_PER_BLOCK 28
 #define WARP_SIZE 32
+
+enum MODE {
+    SIMPLE,
+    ORDER,
+    MULTIROW,
+	ALL // TESTING
+};
 
 typedef struct {
 	int nr; //Number of rows
@@ -13,6 +23,7 @@ typedef struct {
 } sp_mat_t;
 
 typedef struct {
+	MODE mode; //Mode 0 = Multirow Analysis; Anything else is Order Analysis
 
 	int lev_ctr;
 	int nlevs;  //guarda la cantidad maxima de niveles de dependias de todas las posibles fila 
@@ -28,3 +39,6 @@ typedef struct {
 	int* row_ctr;
 
 } dfr_analysis_info_t;
+
+
+#endif

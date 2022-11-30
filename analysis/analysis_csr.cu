@@ -269,7 +269,7 @@ __global__ void kernel_base(int* buckets_off, int* rows_off, int* warp_base, int
     }
 }
 
-void multirow_analysis_base_GPU(dfr_analysis_info_t** mat, sp_mat_t* gpu_L, int mode) {
+void multirow_analysis_base_GPU(dfr_analysis_info_t** mat, sp_mat_t* gpu_L, MODE mode) {
     FILE* fp;
 
     dfr_analysis_info_t* current = *mat;
@@ -350,7 +350,8 @@ void multirow_analysis_base_GPU(dfr_analysis_info_t** mat, sp_mat_t* gpu_L, int 
     thrust::counting_iterator<int> iter(0);
     thrust::copy(iter, iter + rows, iorder.begin());
     thrust::stable_sort_by_key(dfr_analysis_info.begin(), dfr_analysis_info.begin() + rows, iorder.begin());
-    if (mode != 1) {
+
+    if (mode == MULTIROW || mode == ALL) {
         vect_size_from_index calc_size;
         thrust::transform(dfr_analysis_info.begin(), dfr_analysis_info.begin() + rows, ivect_size.begin(), calc_size);
 
@@ -368,6 +369,7 @@ void multirow_analysis_base_GPU(dfr_analysis_info_t** mat, sp_mat_t* gpu_L, int 
         // Calcular buck off
         thrust::exclusive_scan(warps_per_bucks.begin(), warps_per_bucks.begin() + 7 * nLevs_dfr + 1, warps_per_bucks.begin());
         int num_warps = warps_per_bucks[7 * nLevs_dfr];
+        current->n_warps = num_warps;
 
         thrust::exclusive_scan(buckets.begin(), buckets.begin() + 7 * nLevs_dfr + 1, buckets.begin());
 
@@ -388,7 +390,6 @@ void multirow_analysis_base_GPU(dfr_analysis_info_t** mat, sp_mat_t* gpu_L, int 
     CUDA_CHK(cudaMalloc((void**)&(current->row_ctr), sizeof(int)));
 
     current->nlevs = nLevs_dfr;
-    current->n_warps = num_warps;
 
     dfr_analysis_info.clear();
     dfr_analysis_info.shrink_to_fit();

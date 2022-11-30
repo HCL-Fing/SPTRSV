@@ -115,7 +115,7 @@ __global__ void csr_L_solve_kernel_multirow(const int* __restrict__ row_ptr,
 
 void csr_L_solve_multirow(sp_mat_t* mat, dfr_analysis_info_t* info, const VALUE_TYPE* b, VALUE_TYPE* x, int n, cudaStream_t stream = 0) {
     int num_threads = WARP_PER_BLOCK * WARP_SIZE;
-
+    
     int grid = ceil((double)info->n_warps * WARP_SIZE / (double)num_threads);
 
     CUDA_CHK(cudaMemsetAsync(x, 0xFF, n * sizeof(VALUE_TYPE), stream));
