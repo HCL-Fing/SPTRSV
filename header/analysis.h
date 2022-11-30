@@ -1,3 +1,6 @@
+#ifndef __ANALYSIS__
+#define __ANALYSIS__
+
 /*
 Description
 This function analyzes the structure of the sparse matrix received in
@@ -12,5 +15,8 @@ Post:
 the result of the analysis is returned on the parameter info,
 user is responsible of freeing up memory allocated
 */
+#include "dfr_syncfree.h"
 
-void multirow_analysis_base_GPU(dfr_analysis_info_t** info, sp_mat_t* gpu_L);
+void multirow_analysis_base_GPU(dfr_analysis_info_t** info, sp_mat_t* gpu_L, MODE mode);
+
+#endif

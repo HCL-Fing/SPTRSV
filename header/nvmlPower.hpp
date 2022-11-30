@@ -1,9 +1,9 @@
+
+#ifndef __INCLNVML__
+#define __INCLNVML__
 /*
 Header file including necessary nvml headers.
 */
-
-#ifndef INCLNVML
-#define INCLNVML
 
 #include <stdio.h>
 #include <stdlib.h>
