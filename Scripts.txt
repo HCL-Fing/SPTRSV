@@ -1,0 +1,48 @@
+Sacar tiempos de solver:
+	Poner en script: OLD=0 y TIMER_SOLVERS=1 
+	Poner en common.h: PRINT_TIME_ANALYSIS 0 y BENCH_REPEAT  1
+	En test.cu habilitar multirow_analysis_base_GPU (linea 305)
+	Script en lab3: (En las 22 matrices)
+3)
+matrix=(chipcool0 hollywood-2009 nlpkkt160 road_central road_usa ship_003 webbase-1M wiki-Talk crankseg_1 cant cvxbqp1 ncvxqp3 luxembourg_osm rajat29 bayer01 circuit5M_dc exdata_1 CO 2D_54019_highK cond-mat TSOPF_RS_b300_c2 LeGresley_87936)
+file="tiempos_solvers.csv"
+make OLD=0 TIMER_SOLVERS=1 LOG_FILE="\\\"$folder/$file\\\""
+rm "$folder/$file"
+echo "Matriz,Analisis_Mult, Analisis_Ord,Solver Simple,Solver Order,Solver Multirow,Analisis_Cusp,Solver Cusp" >> "$folder/$file"
+for i in "${matrix[@]}"
+do
+	for j in 1 2 3 4 5 6 7 8 9 10 11 
+	do
+	        echo -n -e "\n $i".mtx >> "$folder/$file"
+		./sptrsv_double /media/matrices/ssget/MM/todas/"$i".mtx
+	done
+done
+;;
+
+
+Sacar tiempo de solvers de las matrices en el archivo "las100.txt":
+
+	file="las100_2080.csv"
+	make OLD=0 TIMER_SOLVERS=1 LOG_FILE="\\\"$folder/$file\\\""
+	rm "$file"
+	echo "Matriz,AnalisisGPU,Simple,Multirow" >> "$folder/$file"
+
+	matrices=$(cat las100.txt)
+
+	for m in $matrices
+	do
+		nombre_mat=$(echo $m | sed 's/\(.*\);\(.*\);\(.*\);\(.*\)/\2/');
+		for j in 1 2 3 4 5 6 7 8 9 10 11 
+		do
+			echo $nombre_mat
+			echo -n -e "$nombre_mat" >> "$folder/$file"
+	    	timeout 40 ./sptrsv_double /media/matrices/ssget/MM/todas/$nombre_mat
+	    done
+	done
+
+- Sacar tiempo de analisis bash run_test.sh 17 (en 2080) o 18 (en 3090)
+	Si OLD = 1 --> Analisis viejo
+	Si OLD = 0 --> Cambiar en codigo el analisis a ejecutar, multirow_analysis_base_GPU o multirow_analysis_base_parallel (con modo 0(Parallel o Kernel) o 2(OMP))
+		Si ANALYSIS_COOP = 1 utiliza kernel aux
+		Si ANALYSIS_COOP = 0 utiliza kenrel viejo
+		(ANALYSIS_COOP esta definido en analsis_csr.cu como #define)

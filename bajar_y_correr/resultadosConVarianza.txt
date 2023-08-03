@@ -1,0 +1,836 @@
+crystm01/crystm01.mtx
+---------------------------------------------------------------------------------------------
+PRECISION = 64-bit Double Precision
+Benchmark REPEAT = 1
+---------------------------------------------------------------------------------------------
+-------------- crystm01/crystm01.mtx --------------
+WARPS PER BLOCK = 22.
+input matrix is symmetric = true
+---------------------------------------------------------------------------------------------
+********************************************************************************************
+                                Datos de la matriz
+
+Filas: 4875, NNZ: 105339 
+Resultado calculado: 27
+Particionando:
+Numero: 27 Porcentaje: 100% Diferencia: 0
+Bipartición:
+Numero: 27 Porcentaje: 100% Diferencia: 0
+
+Desviación calculada: 5.347196 Desviación estimada: 16.326076 Porcentaje: 305% Diferencia 10.978880
+*********************************************************************************************
+
+Bye!
+Cube_Coup_dt6/
+Cube_Coup_dt6/Cube_Coup_dt6.mtx
+mark3jac100/mark3jac100.mtx
+---------------------------------------------------------------------------------------------
+PRECISION = 64-bit Double Precision
+Benchmark REPEAT = 1
+---------------------------------------------------------------------------------------------
+-------------- mark3jac100/mark3jac100.mtx --------------
+WARPS PER BLOCK = 22.
+input matrix is symmetric = false
+---------------------------------------------------------------------------------------------
+********************************************************************************************
+                                Datos de la matriz
+
+Filas: 45769, NNZ: 285215 
+Resultado calculado: 44
+Particionando:
+Numero: 8 Porcentaje: 18% Diferencia: 36
+Bipartición:
+Numero: 44 Porcentaje: 100% Diferencia: 0
+
+Desviación calculada: 4.348977 Desviación estimada: 6.215316 Porcentaje: 143% Diferencia 1.866339
+*********************************************************************************************
+
+Bye!
+cond-mat-2003/cond-mat-2003.mtx
+cond-mat-2003/cond-mat-2003_nodename.txt
+---------------------------------------------------------------------------------------------
+PRECISION = 64-bit Double Precision
+Benchmark REPEAT = 1
+---------------------------------------------------------------------------------------------
+-------------- cond-mat-2003/cond-mat-2003.mtx --------------
+WARPS PER BLOCK = 22.
+input matrix is symmetric = true
+---------------------------------------------------------------------------------------------
+********************************************************************************************
+                                Datos de la matriz
+
+Filas: 31163, NNZ: 240058 
+Resultado calculado: 202
+Particionando:
+Numero: 40 Porcentaje: 19% Diferencia: 162
+Bipartición:
+Numero: 115 Porcentaje: 56% Diferencia: 87
+
+Desviación calculada: 10.398171 Desviación estimada: 9.066335 Porcentaje: 87% Diferencia 1.331836
+*********************************************************************************************
+
+Bye!
+LeGresley_87936/LeGresley_87936.mtx
+LeGresley_87936/LeGresley_87936_b.mtx
+---------------------------------------------------------------------------------------------
+PRECISION = 64-bit Double Precision
+Benchmark REPEAT = 1
+---------------------------------------------------------------------------------------------
+-------------- LeGresley_87936/LeGresley_87936.mtx --------------
+WARPS PER BLOCK = 22.
+input matrix is symmetric = false
+---------------------------------------------------------------------------------------------
+********************************************************************************************
+                                Datos de la matriz
+
+Filas: 87936, NNZ: 593276 
+Resultado calculado: 56
+Particionando:
+Numero: 12 Porcentaje: 21% Diferencia: 44
+Bipartición:
+Numero: 50 Porcentaje: 89% Diferencia: 6
+
+Desviación calculada: 3.338661 Desviación estimada: 6.832156 Porcentaje: 205% Diferencia 3.493495
+*********************************************************************************************
+
+Bye!
+lp_fit2d/lp_fit2d.mtx
+lp_fit2d/lp_fit2d_b.mtx
+lp_fit2d/lp_fit2d_c.mtx
+lp_fit2d/lp_fit2d_hi.mtx
+lp_fit2d/lp_fit2d_lo.mtx
+lp_fit2d/lp_fit2d_z0.mtx
+---------------------------------------------------------------------------------------------
+PRECISION = 64-bit Double Precision
+Benchmark REPEAT = 1
+---------------------------------------------------------------------------------------------
+-------------- lp_fit2d/lp_fit2d.mtx --------------
+WARPS PER BLOCK = 22.
+Matrix is not square.
+af_shell5/af_shell5.mtx
+af_shell5/af_shell5_b.mtx
+---------------------------------------------------------------------------------------------
+PRECISION = 64-bit Double Precision
+Benchmark REPEAT = 1
+---------------------------------------------------------------------------------------------
+-------------- af_shell5/af_shell5.mtx --------------
+WARPS PER BLOCK = 22.
+input matrix is symmetric = true
+---------------------------------------------------------------------------------------------
+********************************************************************************************
+                                Datos de la matriz
+
+Filas: 504855, NNZ: 17588875 
+Resultado calculado: 40
+Particionando:
+Numero: 35 Porcentaje: 87% Diferencia: 5
+Bipartición:
+Numero: 35 Porcentaje: 87% Diferencia: 5
+
+Desviación calculada: 1.275221 Desviación estimada: 34.810608 Porcentaje: 2730% Diferencia 33.535387
+*********************************************************************************************
+
+Bye!
+lhr07c/lhr07c.mtx
+---------------------------------------------------------------------------------------------
+PRECISION = 64-bit Double Precision
+Benchmark REPEAT = 1
+---------------------------------------------------------------------------------------------
+-------------- lhr07c/lhr07c.mtx --------------
+WARPS PER BLOCK = 22.
+input matrix is symmetric = false
+---------------------------------------------------------------------------------------------
+********************************************************************************************
+                                Datos de la matriz
+
+Filas: 7337, NNZ: 156508 
+Resultado calculado: 63
+Particionando:
+Numero: 38 Porcentaje: 60% Diferencia: 25
+Bipartición:
+Numero: 63 Porcentaje: 100% Diferencia: 0
+
+Desviación calculada: 26.202418 Desviación estimada: 24.189558 Porcentaje: 92% Diferencia 2.012860
+*********************************************************************************************
+
+Bye!
+mk13-b5/mk13-b5.mtx
+---------------------------------------------------------------------------------------------
+PRECISION = 64-bit Double Precision
+Benchmark REPEAT = 1
+---------------------------------------------------------------------------------------------
+-------------- mk13-b5/mk13-b5.mtx --------------
+WARPS PER BLOCK = 22.
+Matrix is not square.
+TSOPF_FS_b300/TSOPF_FS_b300.mtx
+TSOPF_FS_b300/TSOPF_FS_b300_b.mtx
+---------------------------------------------------------------------------------------------
+PRECISION = 64-bit Double Precision
+Benchmark REPEAT = 1
+---------------------------------------------------------------------------------------------
+-------------- TSOPF_FS_b300/TSOPF_FS_b300.mtx --------------
+WARPS PER BLOCK = 22.
+input matrix is symmetric = true
+---------------------------------------------------------------------------------------------
+********************************************************************************************
+                                Datos de la matriz
+
+Filas: 29214, NNZ: 4400122 
+Resultado calculado: 13942
+Particionando:
+Numero: 13848 Porcentaje: 99% Diferencia: 94
+Bipartición:
+Numero: 13892 Porcentaje: 99% Diferencia: 50
+
+Desviación calculada: 676.285644 Desviación estimada: 640.328979 Porcentaje: 95% Diferencia 35.956666
+*********************************************************************************************
+
+Bye!
+bloweya/bloweya.mtx
+---------------------------------------------------------------------------------------------
+PRECISION = 64-bit Double Precision
+Benchmark REPEAT = 1
+---------------------------------------------------------------------------------------------
+-------------- bloweya/bloweya.mtx --------------
+WARPS PER BLOCK = 22.
+input matrix is symmetric = true
+---------------------------------------------------------------------------------------------
+********************************************************************************************
+                                Datos de la matriz
+
+Filas: 30004, NNZ: 150009 
+Resultado calculado: 10001
+Particionando:
+Numero: 349 Porcentaje: 3% Diferencia: 9652
+Bipartición:
+Numero: 10001 Porcentaje: 100% Diferencia: 0
+
+Desviación calculada: 57.763892 Desviación estimada: 11.797417 Porcentaje: 20% Diferencia 45.966475
+*********************************************************************************************
+
+Bye!
+cavity21/cavity21.mtx
+cavity21/cavity21_b.mtx
+cavity21/cavity21_x.mtx
+---------------------------------------------------------------------------------------------
+PRECISION = 64-bit Double Precision
+Benchmark REPEAT = 1
+---------------------------------------------------------------------------------------------
+-------------- cavity21/cavity21.mtx --------------
+WARPS PER BLOCK = 22.
+input matrix is symmetric = false
+---------------------------------------------------------------------------------------------
+********************************************************************************************
+                                Datos de la matriz
+
+Filas: 4562, NNZ: 138187 
+Resultado calculado: 62
+Particionando:
+Numero: 49 Porcentaje: 79% Diferencia: 13
+Bipartición:
+Numero: 62 Porcentaje: 100% Diferencia: 0
+
+Desviación calculada: 16.889695 Desviación estimada: 26.137154 Porcentaje: 155% Diferencia 9.247459
+*********************************************************************************************
+
+Bye!
+tmt_unsym/tmt_unsym.mtx
+---------------------------------------------------------------------------------------------
+PRECISION = 64-bit Double Precision
+Benchmark REPEAT = 1
+---------------------------------------------------------------------------------------------
+-------------- tmt_unsym/tmt_unsym.mtx --------------
+WARPS PER BLOCK = 22.
+input matrix is symmetric = false
+---------------------------------------------------------------------------------------------
+********************************************************************************************
+                                Datos de la matriz
+
+Filas: 917825, NNZ: 4584801 
+Resultado calculado: 5
+Particionando:
+Numero: 5 Porcentaje: 100% Diferencia: 0
+Bipartición:
+Numero: 5 Porcentaje: 100% Diferencia: 0
+
+Desviación calculada: 0.086325 Desviación estimada: 5.082635 Porcentaje: 5888% Diferencia 4.996310
+*********************************************************************************************
+
+Bye!
+great-britain_osm/great-britain_osm.mtx
+great-britain_osm/great-britain_osm_coord.mtx
+---------------------------------------------------------------------------------------------
+PRECISION = 64-bit Double Precision
+Benchmark REPEAT = 1
+---------------------------------------------------------------------------------------------
+-------------- great-britain_osm/great-britain_osm.mtx --------------
+WARPS PER BLOCK = 22.
+input matrix is symmetric = true
+---------------------------------------------------------------------------------------------
+********************************************************************************************
+                                Datos de la matriz
+
+Filas: 7733822, NNZ: 16313034 
+Resultado calculado: 8
+Particionando:
+Numero: 2 Porcentaje: 25% Diferencia: 6
+Bipartición:
+Numero: 4 Porcentaje: 50% Diferencia: 4
+
+Desviación calculada: 0.543376 Desviación estimada: 2.148587 Porcentaje: 395% Diferencia 1.605211
+*********************************************************************************************
+
+Bye!
+c-57/c-57.mtx
+c-57/c-57_b.mtx
+---------------------------------------------------------------------------------------------
+PRECISION = 64-bit Double Precision
+Benchmark REPEAT = 1
+---------------------------------------------------------------------------------------------
+-------------- c-57/c-57.mtx --------------
+WARPS PER BLOCK = 22.
+input matrix is symmetric = true
+---------------------------------------------------------------------------------------------
+********************************************************************************************
+                                Datos de la matriz
+
+Filas: 37833, NNZ: 405197 
+Resultado calculado: 10402
+Particionando:
+Numero: 2631 Porcentaje: 25% Diferencia: 7771
+Bipartición:
+Numero: 10210 Porcentaje: 98% Diferencia: 192
+
+Desviación calculada: 134.882182 Desviación estimada: 84.235133 Porcentaje: 62% Diferencia 50.647050
+*********************************************************************************************
+
+Bye!
+goodwin/goodwin.mtx
+---------------------------------------------------------------------------------------------
+PRECISION = 64-bit Double Precision
+Benchmark REPEAT = 1
+---------------------------------------------------------------------------------------------
+-------------- goodwin/goodwin.mtx --------------
+WARPS PER BLOCK = 22.
+input matrix is symmetric = false
+---------------------------------------------------------------------------------------------
+********************************************************************************************
+                                Datos de la matriz
+
+Filas: 7320, NNZ: 324784 
+Resultado calculado: 112
+Particionando:
+Numero: 75 Porcentaje: 66% Diferencia: 37
+Bipartición:
+Numero: 112 Porcentaje: 100% Diferencia: 0
+
+Desviación calculada: 26.566452 Desviación estimada: 42.396043 Porcentaje: 160% Diferencia 15.829592
+*********************************************************************************************
+
+Bye!
+TEM27623/TEM27623.mtx
+TEM27623/TEM27623_M.mtx
+TEM27623/TEM27623_q.mtx
+---------------------------------------------------------------------------------------------
+PRECISION = 64-bit Double Precision
+Benchmark REPEAT = 1
+---------------------------------------------------------------------------------------------
+-------------- TEM27623/TEM27623.mtx --------------
+WARPS PER BLOCK = 22.
+input matrix is symmetric = true
+---------------------------------------------------------------------------------------------
+********************************************************************************************
+                                Datos de la matriz
+
+Filas: 27623, NNZ: 439469 
+Resultado calculado: 28
+Particionando:
+Numero: 17 Porcentaje: 60% Diferencia: 11
+Bipartición:
+Numero: 25 Porcentaje: 89% Diferencia: 3
+
+Desviación calculada: 3.018664 Desviación estimada: 15.645451 Porcentaje: 518% Diferencia 12.626787
+*********************************************************************************************
+
+Bye!
+web-Stanford/web-Stanford.mtx
+---------------------------------------------------------------------------------------------
+PRECISION = 64-bit Double Precision
+Benchmark REPEAT = 1
+---------------------------------------------------------------------------------------------
+-------------- web-Stanford/web-Stanford.mtx --------------
+WARPS PER BLOCK = 22.
+input matrix is symmetric = false
+---------------------------------------------------------------------------------------------
+********************************************************************************************
+                                Datos de la matriz
+
+Filas: 281903, NNZ: 2312497 
+Resultado calculado: 255
+Particionando:
+Numero: 10 Porcentaje: 3% Diferencia: 245
+Bipartición:
+Numero: 244 Porcentaje: 95% Diferencia: 11
+
+Desviación calculada: 11.311426 Desviación estimada: 8.235284 Porcentaje: 73% Diferencia 3.076142
+*********************************************************************************************
+
+Bye!
+HTC_336_4438/HTC_336_4438.mtx
+HTC_336_4438/HTC_336_4438_b.mtx
+---------------------------------------------------------------------------------------------
+PRECISION = 64-bit Double Precision
+Benchmark REPEAT = 1
+---------------------------------------------------------------------------------------------
+-------------- HTC_336_4438/HTC_336_4438.mtx --------------
+WARPS PER BLOCK = 22.
+input matrix is symmetric = true
+---------------------------------------------------------------------------------------------
+********************************************************************************************
+                                Datos de la matriz
+
+Filas: 226340, NNZ: 904522 
+Resultado calculado: 7394
+Particionando:
+Numero: 119 Porcentaje: 1% Diferencia: 7275
+Bipartición:
+Numero: 7394 Porcentaje: 100% Diferencia: 0
+
+Desviación calculada: 34.345856 Desviación estimada: 7.260937 Porcentaje: 21% Diferencia 27.084919
+*********************************************************************************************
+
+Bye!
+pli/pli.mtx
+---------------------------------------------------------------------------------------------
+PRECISION = 64-bit Double Precision
+Benchmark REPEAT = 1
+---------------------------------------------------------------------------------------------
+-------------- pli/pli.mtx --------------
+WARPS PER BLOCK = 22.
+input matrix is symmetric = true
+---------------------------------------------------------------------------------------------
+********************************************************************************************
+                                Datos de la matriz
+
+Filas: 22695, NNZ: 1350309 
+Resultado calculado: 108
+Particionando:
+Numero: 77 Porcentaje: 71% Diferencia: 31
+Bipartición:
+Numero: 108 Porcentaje: 100% Diferencia: 0
+
+Desviación calculada: 29.206014 Desviación estimada: 61.315675 Porcentaje: 210% Diferencia 32.109661
+*********************************************************************************************
+
+Bye!
+lowThrust_4/lowThrust_4.mtx
+lowThrust_4/lowThrust_4_b.mtx
+lowThrust_4/lowThrust_4_mapping.mtx
+lowThrust_4/lowThrust_4_rowname.txt
+---------------------------------------------------------------------------------------------
+PRECISION = 64-bit Double Precision
+Benchmark REPEAT = 1
+---------------------------------------------------------------------------------------------
+-------------- lowThrust_4/lowThrust_4.mtx --------------
+WARPS PER BLOCK = 22.
+input matrix is symmetric = true
+---------------------------------------------------------------------------------------------
+********************************************************************************************
+                                Datos de la matriz
+
+Filas: 13562, NNZ: 160947 
+Resultado calculado: 5273
+Particionando:
+Numero: 819 Porcentaje: 15% Diferencia: 4454
+Bipartición:
+Numero: 5273 Porcentaje: 100% Diferencia: 0
+
+Desviación calculada: 64.033266 Desviación estimada: 27.753585 Porcentaje: 43% Diferencia 36.279681
+*********************************************************************************************
+
+Bye!
+cit-HepTh/cit-HepTh.mtx
+cit-HepTh/cit-HepTh_nodename.mtx
+---------------------------------------------------------------------------------------------
+PRECISION = 64-bit Double Precision
+Benchmark REPEAT = 1
+---------------------------------------------------------------------------------------------
+-------------- cit-HepTh/cit-HepTh.mtx --------------
+WARPS PER BLOCK = 22.
+input matrix is symmetric = false
+---------------------------------------------------------------------------------------------
+********************************************************************************************
+                                Datos de la matriz
+
+Filas: 27770, NNZ: 352807 
+Resultado calculado: 562
+Particionando:
+Numero: 35 Porcentaje: 6% Diferencia: 527
+Bipartición:
+Numero: 263 Porcentaje: 46% Diferencia: 299
+
+Desviación calculada: 15.967372 Desviación estimada: 14.060425 Porcentaje: 88% Diferencia 1.906947
+*********************************************************************************************
+
+Bye!
+twotone/twotone.mtx
+---------------------------------------------------------------------------------------------
+PRECISION = 64-bit Double Precision
+Benchmark REPEAT = 1
+---------------------------------------------------------------------------------------------
+-------------- twotone/twotone.mtx --------------
+WARPS PER BLOCK = 22.
+input matrix is symmetric = false
+---------------------------------------------------------------------------------------------
+********************************************************************************************
+                                Datos de la matriz
+
+Filas: 120750, NNZ: 1224224 
+Resultado calculado: 185
+Particionando:
+Numero: 15 Porcentaje: 8% Diferencia: 170
+Bipartición:
+Numero: 58 Porcentaje: 31% Diferencia: 127
+
+Desviación calculada: 15.034915 Desviación estimada: 10.533588 Porcentaje: 70% Diferencia 4.501327
+*********************************************************************************************
+
+Bye!
+cont11_l/cont11_l.mtx
+cont11_l/cont11_l_b.mtx
+cont11_l/cont11_l_c.mtx
+cont11_l/cont11_l_hi.mtx
+cont11_l/cont11_l_lo.mtx
+cont11_l/cont11_l_z0.mtx
+---------------------------------------------------------------------------------------------
+PRECISION = 64-bit Double Precision
+Benchmark REPEAT = 1
+---------------------------------------------------------------------------------------------
+-------------- cont11_l/cont11_l.mtx --------------
+WARPS PER BLOCK = 22.
+Matrix is not square.
+nlpkkt160/
+nlpkkt160/nlpkkt160.mtx
+sc2010/sc2010.mtx
+sc2010/sc2010_area.mtx
+sc2010/sc2010_coord.mtx
+sc2010/sc2010_population.mtx
+---------------------------------------------------------------------------------------------
+PRECISION = 64-bit Double Precision
+Benchmark REPEAT = 1
+---------------------------------------------------------------------------------------------
+-------------- sc2010/sc2010.mtx --------------
+WARPS PER BLOCK = 22.
+input matrix is symmetric = true
+---------------------------------------------------------------------------------------------
+********************************************************************************************
+                                Datos de la matriz
+
+Filas: 181908, NNZ: 893160 
+Resultado calculado: 69
+Particionando:
+Numero: 5 Porcentaje: 7% Diferencia: 64
+Bipartición:
+Numero: 55 Porcentaje: 79% Diferencia: 14
+
+Desviación calculada: 3.036185 Desviación estimada: 4.950437 Porcentaje: 163% Diferencia 1.914252
+*********************************************************************************************
+
+Bye!
+s3dkt3m2/s3dkt3m2.mtx
+s3dkt3m2/s3dkt3m2_coord.mtx
+---------------------------------------------------------------------------------------------
+PRECISION = 64-bit Double Precision
+Benchmark REPEAT = 1
+---------------------------------------------------------------------------------------------
+-------------- s3dkt3m2/s3dkt3m2.mtx --------------
+WARPS PER BLOCK = 22.
+input matrix is symmetric = true
+---------------------------------------------------------------------------------------------
+********************************************************************************************
+                                Datos de la matriz
+
+Filas: 90449, NNZ: 3753461 
+Resultado calculado: 42
+Particionando:
+Numero: 42 Porcentaje: 100% Diferencia: 0
+Bipartición:
+Numero: 42 Porcentaje: 100% Diferencia: 0
+
+Desviación calculada: 2.682215 Desviación estimada: 41.291190 Porcentaje: 1539% Diferencia 38.608975
+*********************************************************************************************
+
+Bye!
+bcsstk38/bcsstk38.mtx
+---------------------------------------------------------------------------------------------
+PRECISION = 64-bit Double Precision
+Benchmark REPEAT = 1
+---------------------------------------------------------------------------------------------
+-------------- bcsstk38/bcsstk38.mtx --------------
+WARPS PER BLOCK = 22.
+input matrix is symmetric = true
+---------------------------------------------------------------------------------------------
+********************************************************************************************
+                                Datos de la matriz
+
+Filas: 8032, NNZ: 355460 
+Resultado calculado: 614
+Particionando:
+Numero: 173 Porcentaje: 28% Diferencia: 441
+Bipartición:
+Numero: 614 Porcentaje: 100% Diferencia: 0
+
+Desviación calculada: 20.449463 Desviación estimada: 39.239704 Porcentaje: 192% Diferencia 18.790241
+*********************************************************************************************
+
+Bye!
+wing_nodal/wing_nodal.mtx
+---------------------------------------------------------------------------------------------
+PRECISION = 64-bit Double Precision
+Benchmark REPEAT = 1
+---------------------------------------------------------------------------------------------
+-------------- wing_nodal/wing_nodal.mtx --------------
+WARPS PER BLOCK = 22.
+input matrix is symmetric = true
+---------------------------------------------------------------------------------------------
+********************************************************************************************
+                                Datos de la matriz
+
+Filas: 10937, NNZ: 150976 
+Resultado calculado: 28
+Particionando:
+Numero: 17 Porcentaje: 60% Diferencia: 11
+Bipartición:
+Numero: 21 Porcentaje: 75% Diferencia: 7
+
+Desviación calculada: 2.861508 Desviación estimada: 12.387867 Porcentaje: 433% Diferencia 9.526359
+*********************************************************************************************
+
+Bye!
+lowThrust_13/lowThrust_13.mtx
+lowThrust_13/lowThrust_13_b.mtx
+lowThrust_13/lowThrust_13_mapping.mtx
+lowThrust_13/lowThrust_13_rowname.txt
+---------------------------------------------------------------------------------------------
+PRECISION = 64-bit Double Precision
+Benchmark REPEAT = 1
+---------------------------------------------------------------------------------------------
+-------------- lowThrust_13/lowThrust_13.mtx --------------
+WARPS PER BLOCK = 22.
+input matrix is symmetric = true
+---------------------------------------------------------------------------------------------
+********************************************************************************************
+                                Datos de la matriz
+
+Filas: 18476, NNZ: 224897 
+Resultado calculado: 7184
+Particionando:
+Numero: 411 Porcentaje: 5% Diferencia: 6773
+Bipartición:
+Numero: 7183 Porcentaje: 99% Diferencia: 1
+
+Desviación calculada: 74.748296 Desviación estimada: 21.508503 Porcentaje: 29% Diferencia 53.239792
+*********************************************************************************************
+
+Bye!
+vsp_bump2_e18_aa01_model1_crew1/vsp_bump2_e18_aa01_model1_crew1.mtx
+---------------------------------------------------------------------------------------------
+PRECISION = 64-bit Double Precision
+Benchmark REPEAT = 1
+---------------------------------------------------------------------------------------------
+-------------- vsp_bump2_e18_aa01_model1_crew1/vsp_bump2_e18_aa01_model1_crew1.mtx --------------
+WARPS PER BLOCK = 22.
+input matrix is symmetric = true
+---------------------------------------------------------------------------------------------
+********************************************************************************************
+                                Datos de la matriz
+
+Filas: 56438, NNZ: 601602 
+Resultado calculado: 604
+Particionando:
+Numero: 373 Porcentaje: 61% Diferencia: 231
+Bipartición:
+Numero: 378 Porcentaje: 62% Diferencia: 226
+
+Desviación calculada: 21.423662 Desviación estimada: 22.522229 Porcentaje: 105% Diferencia 1.098567
+*********************************************************************************************
+
+Bye!
+n4c6-b6/n4c6-b6.mtx
+---------------------------------------------------------------------------------------------
+PRECISION = 64-bit Double Precision
+Benchmark REPEAT = 1
+---------------------------------------------------------------------------------------------
+-------------- n4c6-b6/n4c6-b6.mtx --------------
+WARPS PER BLOCK = 22.
+Matrix is not square.
+caidaRouterLevel/caidaRouterLevel.mtx
+---------------------------------------------------------------------------------------------
+PRECISION = 64-bit Double Precision
+Benchmark REPEAT = 1
+---------------------------------------------------------------------------------------------
+-------------- caidaRouterLevel/caidaRouterLevel.mtx --------------
+WARPS PER BLOCK = 22.
+input matrix is symmetric = true
+---------------------------------------------------------------------------------------------
+********************************************************************************************
+                                Datos de la matriz
+
+Filas: 192244, NNZ: 1218132 
+Resultado calculado: 1071
+Particionando:
+Numero: 35 Porcentaje: 3% Diferencia: 1036
+Bipartición:
+Numero: 696 Porcentaje: 64% Diferencia: 375
+
+Desviación calculada: 14.140008 Desviación estimada: 8.325700 Porcentaje: 59% Diferencia 5.814308
+*********************************************************************************************
+
+Bye!
+TSOPF_RS_b162_c1/TSOPF_RS_b162_c1.mtx
+TSOPF_RS_b162_c1/TSOPF_RS_b162_c1_b.mtx
+---------------------------------------------------------------------------------------------
+PRECISION = 64-bit Double Precision
+Benchmark REPEAT = 1
+---------------------------------------------------------------------------------------------
+-------------- TSOPF_RS_b162_c1/TSOPF_RS_b162_c1.mtx --------------
+WARPS PER BLOCK = 22.
+input matrix is symmetric = false
+---------------------------------------------------------------------------------------------
+********************************************************************************************
+                                Datos de la matriz
+
+Filas: 5374, NNZ: 205399 
+Resultado calculado: 77
+Particionando:
+Numero: 77 Porcentaje: 100% Diferencia: 0
+Bipartición:
+Numero: 77 Porcentaje: 100% Diferencia: 0
+
+Desviación calculada: 36.187208 Desviación estimada: 46.747851 Porcentaje: 129% Diferencia 10.560643
+*********************************************************************************************
+
+Bye!
+bibd_81_3/bibd_81_3.mtx
+---------------------------------------------------------------------------------------------
+PRECISION = 64-bit Double Precision
+Benchmark REPEAT = 1
+---------------------------------------------------------------------------------------------
+-------------- bibd_81_3/bibd_81_3.mtx --------------
+WARPS PER BLOCK = 22.
+Matrix is not square.
+nemeth10/nemeth10.mtx
+---------------------------------------------------------------------------------------------
+PRECISION = 64-bit Double Precision
+Benchmark REPEAT = 1
+---------------------------------------------------------------------------------------------
+-------------- nemeth10/nemeth10.mtx --------------
+WARPS PER BLOCK = 22.
+input matrix is symmetric = true
+---------------------------------------------------------------------------------------------
+********************************************************************************************
+                                Datos de la matriz
+
+Filas: 9506, NNZ: 401448 
+Resultado calculado: 52
+Particionando:
+Numero: 46 Porcentaje: 88% Diferencia: 6
+Bipartición:
+Numero: 51 Porcentaje: 98% Diferencia: 1
+
+Desviación calculada: 7.070076 Desviación estimada: 39.002119 Porcentaje: 552% Diferencia 31.932043
+*********************************************************************************************
+
+Bye!
+delaunay_n18/delaunay_n18.mtx
+---------------------------------------------------------------------------------------------
+PRECISION = 64-bit Double Precision
+Benchmark REPEAT = 1
+---------------------------------------------------------------------------------------------
+-------------- delaunay_n18/delaunay_n18.mtx --------------
+WARPS PER BLOCK = 22.
+input matrix is symmetric = true
+---------------------------------------------------------------------------------------------
+********************************************************************************************
+                                Datos de la matriz
+
+Filas: 262144, NNZ: 1572792 
+Resultado calculado: 21
+Particionando:
+Numero: 6 Porcentaje: 28% Diferencia: 15
+Bipartición:
+Numero: 17 Porcentaje: 80% Diferencia: 4
+
+Desviación calculada: 1.341118 Desviación estimada: 6.029278 Porcentaje: 450% Diferencia 4.688159
+*********************************************************************************************
+
+Bye!
+ship_003/ship_003.mtx
+---------------------------------------------------------------------------------------------
+PRECISION = 64-bit Double Precision
+Benchmark REPEAT = 1
+---------------------------------------------------------------------------------------------
+-------------- ship_003/ship_003.mtx --------------
+WARPS PER BLOCK = 22.
+input matrix is symmetric = true
+---------------------------------------------------------------------------------------------
+********************************************************************************************
+                                Datos de la matriz
+
+Filas: 121728, NNZ: 8086034 
+Resultado calculado: 144
+Particionando:
+Numero: 100 Porcentaje: 69% Diferencia: 44
+Bipartición:
+Numero: 120 Porcentaje: 83% Diferencia: 24
+
+Desviación calculada: 18.694054 Desviación estimada: 67.455859 Porcentaje: 361% Diferencia 48.761805
+*********************************************************************************************
+
+Bye!
+web-Google/web-Google.mtx
+---------------------------------------------------------------------------------------------
+PRECISION = 64-bit Double Precision
+Benchmark REPEAT = 1
+---------------------------------------------------------------------------------------------
+-------------- web-Google/web-Google.mtx --------------
+WARPS PER BLOCK = 22.
+input matrix is symmetric = false
+---------------------------------------------------------------------------------------------
+********************************************************************************************
+                                Datos de la matriz
+
+Filas: 916428, NNZ: 5105039 
+Resultado calculado: 456
+Particionando:
+Numero: 6 Porcentaje: 1% Diferencia: 450
+Bipartición:
+Numero: 277 Porcentaje: 60% Diferencia: 179
+
+Desviación calculada: 6.556528 Desviación estimada: 5.596895 Porcentaje: 85% Diferencia 0.959633
+*********************************************************************************************
+
+Bye!
+finan512/finan512.mtx
+---------------------------------------------------------------------------------------------
+PRECISION = 64-bit Double Precision
+Benchmark REPEAT = 1
+---------------------------------------------------------------------------------------------
+-------------- finan512/finan512.mtx --------------
+WARPS PER BLOCK = 22.
+input matrix is symmetric = true
+---------------------------------------------------------------------------------------------
+********************************************************************************************
+                                Datos de la matriz
+
+Filas: 74752, NNZ: 596992 
+Resultado calculado: 55
+Particionando:
+Numero: 9 Porcentaje: 16% Diferencia: 46
+Bipartición:
+Numero: 55 Porcentaje: 100% Diferencia: 0
+
+Desviación calculada: 6.277842 Desviación estimada: 7.996559 Porcentaje: 127% Diferencia 1.718717
+*********************************************************************************************
+
+Bye!
